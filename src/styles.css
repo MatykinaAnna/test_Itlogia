@@ -2,11 +2,11 @@
 .body {
   display: flex;
   justify-content: center;
-  font-family: 'Arial';
+  font-family: 'Muller';
 }
-.wrapper {
-  width: 1220px;
-}
+/* .wrapper {
+  max-width: 1200px;
+} */
 button {
   background: none;
   border: none;
@@ -23,14 +23,8 @@ a:hover {
 }
 
 @media (max-width: 800px) {
-  .body {
-    margin: 0 40px;
-  }
 }
 @media (max-width: 600px) {
-  .body {
-    margin: 0 10px;
-  }
 }
 
 @font-face {

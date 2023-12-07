@@ -66,8 +66,7 @@
               [compound]="item.compound"
               [img]="item.img"
               [id]="item.id"
-              (goToCart)="goToCart($event)"
-            ></card>
+              (goToCart)="goToCart($event)"></card>
           </div>
         </div>
       </div>
@@ -96,22 +95,19 @@
                 name="name"
                 formControlName="name"
                 placeholder="Ваше имя"
-                (keyup)="_keyUp($event)"
-              />
+                (keyup)="_keyUp($event)" />
             </div>
             <div>
               <input
                 name="address"
                 formControlName="address"
-                placeholder="Адрес доставки"
-              />
+                placeholder="Адрес доставки" />
             </div>
             <div>
               <input
                 name="phone"
                 formControlName="phone"
-                placeholder="Телефон"
-              />
+                placeholder="Телефон" />
             </div>
             <button [disabled]="form.invalid">Оформить заказ</button>
           </form>

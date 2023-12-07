@@ -3,9 +3,11 @@ img {
 }
 
 .container {
-  width: 100%;
+  /* width: 100%; */
   height: 100%;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Muller, Helvetica, sans-serif;
+  display: flex;
+  flex-direction: column;
 }
 
 .content {
@@ -19,16 +21,24 @@ img {
   margin-top: 100px;
   display: flex;
 }
+
+.container > .firstBlock > .inform {
+  margin-right: 60px;
+}
+
 .container > .firstBlock > .inform > .header1 {
-  color: #bd8f4e;
-  font-size: 40px;
-  font-weight: bold;
+  font-size: 38px;
+  line-height: 55px;
+  font-weight: 800;
+  color: #b99150;
+  width: 625px;
 }
 .container > .firstBlock > .inform > .header2 {
-  color: #fdb115;
-  font-size: 40px;
-  font-weight: bold;
-  margin-bottom: 40px;
+  color: #ffc468;
+  font-size: 38px;
+  line-height: 55px;
+  font-weight: 800;
+  margin-bottom: 60px;
 }
 
 .container > .firstBlock > .inform > .row {
@@ -40,21 +50,37 @@ img {
 .container > .firstBlock > .inform > .row > .inf {
   display: flex;
   width: 50%;
+  margin-right: 40px;
 }
 
 .container > .firstBlock > .inform > .row > .inf > img {
-  width: 77px;
-  height: 77px;
+  width: 60px;
+  height: 60px;
+  margin-right: 20px;
 }
 
 .container > .firstBlock > .inform > .row > .inf > div > .header {
-  color: #fdb115;
-  font-weight: bold;
+  font-family: Arial;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  color: #ffaf18;
 }
 
 .container > .firstBlock > .inform > .row > .inf > div > .text {
-  color: #bd8f4e;
+  font-family: Arial;
   font-size: 16px;
+  line-height: 16px;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  color: #b99150;
+  width: 224px;
+}
+
+.container > .firstBlock > .image {
+  margin-top: 60px;
 }
 
 button {
@@ -66,18 +92,20 @@ button {
   align-items: center;
 }
 .btn-firstBlock {
-  width: 222px;
+  width: 224px;
   height: 60px;
 }
 
 .secondBlock {
-  margin-top: 100px;
+  margin-top: 160px;
 }
 
 .secondBlock > .header {
-  font-size: 28px;
-  font-weight: bold;
-  color: #bd8f4e;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 35px;
+  line-height: 55px;
+  font-weight: 700;
+  color: #bd985c;
   text-align: center;
   margin-bottom: 60px;
 }
@@ -95,7 +123,7 @@ button {
 }
 
 .thirdScreen > .inform {
-  width: 30%;
+  width: 37%;
   margin-right: 100px;
 }
 
@@ -105,16 +133,32 @@ button {
 }
 
 .thirdScreen > .inform > .header > .r1 {
-  color: #fdb115;
+  font-family: Arial;
+  font-size: 35px;
+  line-height: 45px;
+  font-weight: 800;
+  color: #ffaf18;
 }
 .thirdScreen > .inform > .header > .r2 {
-  color: #bd8f4e;
+  font-family: Arial;
+  font-size: 35px;
+  line-height: 45px;
+  font-weight: 800;
+  color: #bd985c;
 }
 
 .thirdScreen > .inform > .text {
   margin-top: 50px;
+  font-family: Arial;
   font-size: 16px;
-  color: #bd8f4e;
+  line-height: 24px;
+  font-weight: 400;
+  color: #b99150;
+  width: 375px;
+}
+
+.thirdScreen > .form {
+  margin-top: 65px;
 }
 
 .thirdScreen > .form > form > div {
@@ -132,7 +176,7 @@ input {
   box-sizing: border-box;
   width: 330px;
   height: 60px;
-  border: 1px solid #a2947a;
+  border: 1px solid #b99150;
   padding-left: 20px;
   /* border-color: #bd8f4e; */
 }
@@ -144,4 +188,35 @@ input.ng-touched.ng-invalid {
 input::placeholder {
   color: #a2947a;
   font-size: 18px;
+}
+
+@media (max-width: 1200px) {
+  .container {
+    background-color: aqua;
+  }
+  .image {
+    display: none;
+  }
+  .firstBlock {
+    justify-content: center;
+  }
+
+  .header1,
+  .header2 {
+    text-align: center;
+    font-size: 30px !important;
+  }
+
+  .btn-firstBlock {
+    width: 50%;
+    margin: auto;
+  }
+  .row {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 0px !important;
+  }
+  .row > .inf {
+    margin-bottom: 10px;
+  }
 }

@@ -6,6 +6,7 @@ import { Component } from '@angular/core';
     <div class="container">
       <div class="logo">
         <button (click)="goToHome()"></button>
+        <div>Pizza cheff</div>
       </div>
       <div class="menu">
         <a href="!#">Пиццы</a>
@@ -25,16 +26,44 @@ import { Component } from '@angular/core';
         display: flex;
         justify-content: space-between;
         align-items: center;
+        padding-top: 30px;
       }
-      .container > menu {
+      .container > .menu {
+        display: flex;
+        width: 490px;
+        justify-content: space-between;
+        padding-right: 300px;
+      }
+      .container > .menu > a {
+        font-family: Arial;
+        font-size: 16px;
+        line-height: 1.2;
+        font-weight: 400;
+        letter-spacing: 0.02em;
+        color: #a46b00;
+      }
+      .logo {
+        display: flex;
+        align-items: center;
       }
       .logo > button {
         background: url('../../logo.png');
-        width: 187px;
-        height: 90px;
+        width: 68px;
+        height: 69px;
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center;
+        margin-right: 10px;
+      }
+      .logo > div {
+        font-family: Arial;
+        font-size: 24px;
+        line-height: 1.2;
+        font-weight: 900;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+        color: #ffc468;
+        width: 82px;
       }
     `,
   ],

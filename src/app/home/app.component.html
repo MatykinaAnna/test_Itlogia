@@ -1,0 +1,122 @@
+<div class="body">
+  <div class="wrapper">
+    <header></header>
+
+    <div class="container">
+      <div class="firstBlock">
+        <div class="inform">
+          <div class="header1">Самая вкусная пицца в мире</div>
+          <div class="header2">только в Pizza Cheff</div>
+          <div class="row">
+            <div class="inf">
+              <img src="../../assets/icon/img1.png" alt="" />
+              <div>
+                <div class="header">ЛУЧШЕЕ ТЕСТО</div>
+                <div class="text">
+                  Мы создаем тесто только из отборной итальянской муки
+                  наивысшего качества
+                </div>
+              </div>
+            </div>
+            <div class="inf">
+              <img src="../../assets/icon/img2.png" alt="" />
+              <div>
+                <div class="header">ЛУЧШИЕ ПОВОРА</div>
+                <div class="text">
+                  Пиццы готовят самые профессиональные итальянские повора
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="inf">
+              <img src="../../assets/icon/img3.png" alt="" />
+              <div>
+                <div class="header">ГАРАНТИЯ КАЧЕСТВА</div>
+                <div class="text">
+                  Наша пиццерия получила множество наград и признаний по всему
+                  миру
+                </div>
+              </div>
+            </div>
+            <div class="inf">
+              <img src="../../assets/icon/img4.png" alt="" />
+              <div>
+                <div class="header">ОТБОРНЫЕ РЕЦЕПТЫ</div>
+                <div class="text">
+                  Мы используем рецепты от мировых лидеров в изготовлении пиццы
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="image">
+          <img src="../../assets/icon/pizza.png" alt="" />
+        </div>
+      </div>
+      <button class="btn-firstBlock">Выбрать пиццу</button>
+
+      <div class="secondBlock">
+        <div class="header">Выберете свою любимую пиццу</div>
+
+        <div class="containerForCard">
+          <div *ngFor="let item of pizza">
+            <card
+              [header]="item.header"
+              [compound]="item.compound"
+              [img]="item.img"
+              [id]="item.id"
+              (goToCart)="goToCart($event)"
+            ></card>
+          </div>
+        </div>
+      </div>
+
+      <div class="thirdScreen">
+        <div class="inform">
+          <div class="header">
+            <div class="r1">Хватит думать!</div>
+            <div class="r2">
+              <span>Доставим заказ за 30 минут!</span>
+            </div>
+          </div>
+          <div class="text">
+            Мы гарантированно доставим вашу пиццу за 30 минут с момента
+            оформления заказа. Если мы опоздаем даже на 1 минуту — вы получаете
+            весь заказ бесплатно и ваучер на скидку на следующий заказ. Мы
+            гордимся нашим сервисом и сделаем все, чтобы наш клиент был доволен
+            и не остался голодный!
+          </div>
+        </div>
+
+        <div class="form">
+          <form [formGroup]="form" novalidate (ngSubmit)="submit()">
+            <div>
+              <input
+                name="name"
+                formControlName="name"
+                placeholder="Ваше имя"
+                (keyup)="_keyUp($event)"
+              />
+            </div>
+            <div>
+              <input
+                name="address"
+                formControlName="address"
+                placeholder="Адрес доставки"
+              />
+            </div>
+            <div>
+              <input
+                name="phone"
+                formControlName="phone"
+                placeholder="Телефон"
+              />
+            </div>
+            <button [disabled]="form.invalid">Оформить заказ</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

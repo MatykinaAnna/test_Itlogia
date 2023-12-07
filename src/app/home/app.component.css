@@ -1,0 +1,147 @@
+img {
+  object-fit: cover;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.content {
+  padding-top: 100px;
+  display: flex;
+  /* height: 100%; */
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+.container > .firstBlock {
+  margin-top: 100px;
+  display: flex;
+}
+.container > .firstBlock > .inform > .header1 {
+  color: #bd8f4e;
+  font-size: 40px;
+  font-weight: bold;
+}
+.container > .firstBlock > .inform > .header2 {
+  color: #fdb115;
+  font-size: 40px;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+
+.container > .firstBlock > .inform > .row {
+  display: flex;
+
+  margin-bottom: 40px;
+}
+
+.container > .firstBlock > .inform > .row > .inf {
+  display: flex;
+  width: 50%;
+}
+
+.container > .firstBlock > .inform > .row > .inf > img {
+  width: 77px;
+  height: 77px;
+}
+
+.container > .firstBlock > .inform > .row > .inf > div > .header {
+  color: #fdb115;
+  font-weight: bold;
+}
+
+.container > .firstBlock > .inform > .row > .inf > div > .text {
+  color: #bd8f4e;
+  font-size: 16px;
+}
+
+button {
+  background-color: #fdb115;
+  font-weight: bold;
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.btn-firstBlock {
+  width: 222px;
+  height: 60px;
+}
+
+.secondBlock {
+  margin-top: 100px;
+}
+
+.secondBlock > .header {
+  font-size: 28px;
+  font-weight: bold;
+  color: #bd8f4e;
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.secondBlock > .containerForCard {
+  display: grid;
+  grid-template-columns: repeat(4, 25%);
+  grid-template-rows: 355px 355px;
+  grid-row-gap: 50px;
+}
+
+.thirdScreen {
+  display: flex;
+  margin-top: 200px;
+}
+
+.thirdScreen > .inform {
+  width: 30%;
+  margin-right: 100px;
+}
+
+.thirdScreen > .inform > .header {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.thirdScreen > .inform > .header > .r1 {
+  color: #fdb115;
+}
+.thirdScreen > .inform > .header > .r2 {
+  color: #bd8f4e;
+}
+
+.thirdScreen > .inform > .text {
+  margin-top: 50px;
+  font-size: 16px;
+  color: #bd8f4e;
+}
+
+.thirdScreen > .form > form > div {
+  margin-bottom: 15px;
+}
+
+.thirdScreen > .form > form > button {
+  width: 330px;
+  height: 60px;
+  border: 1px solid #fdb115;
+  color: black;
+}
+
+input {
+  box-sizing: border-box;
+  width: 330px;
+  height: 60px;
+  border: 1px solid #a2947a;
+  padding-left: 20px;
+  /* border-color: #bd8f4e; */
+}
+
+input.ng-touched.ng-invalid {
+  border: solid red 2px;
+}
+
+input::placeholder {
+  color: #a2947a;
+  font-size: 18px;
+}

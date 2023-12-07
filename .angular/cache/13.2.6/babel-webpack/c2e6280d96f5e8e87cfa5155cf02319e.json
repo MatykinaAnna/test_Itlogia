@@ -1,0 +1,1 @@
+{"ast":null,"code":"export class Filtr_numTransfer {\n  constructor(all, without, one, two, three) {\n    this.all = all;\n    this.without = without;\n    this.one = one;\n    this.two = two;\n    this.three = three;\n  }\n\n}","map":null,"metadata":{},"sourceType":"module"}

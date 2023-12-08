@@ -124,7 +124,7 @@ button {
 
 .thirdScreen > .inform {
   width: 37%;
-  margin-right: 100px;
+  margin-right: 65px;
 }
 
 .thirdScreen > .inform > .header {
@@ -172,6 +172,10 @@ button {
   color: black;
 }
 
+.thirdScreen > img {
+  margin-left: 78px;
+}
+
 input {
   box-sizing: border-box;
   width: 330px;
@@ -191,9 +195,6 @@ input::placeholder {
 }
 
 @media (max-width: 1200px) {
-  .container {
-    background-color: aqua;
-  }
   .image {
     display: none;
   }
@@ -208,7 +209,7 @@ input::placeholder {
   }
 
   .btn-firstBlock {
-    width: 50%;
+    width: 33%;
     margin: auto;
   }
   .row {

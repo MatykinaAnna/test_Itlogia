@@ -65,6 +65,11 @@ import { Component } from '@angular/core';
         color: #ffc468;
         width: 82px;
       }
+
+      @media (max-width: 1200px) {
+        .container {
+        }
+      }
     `,
   ],
 })

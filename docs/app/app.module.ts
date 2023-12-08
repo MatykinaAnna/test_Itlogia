@@ -10,14 +10,13 @@ import { RouterModule, Routes } from '@angular/router';
 import { AppHome } from './home/app.component';
 
 import { Header } from './components/header';
-import { ModalComponent } from './components/modal/modal';
 import { Footer } from './components/footer';
 import { Card } from './components/card';
 
 const routes: Routes = [{ path: '', component: AppHome }];
 
 @NgModule({
-  declarations: [AppComponent, AppHome, Header, Footer, Card, ModalComponent],
+  declarations: [AppComponent, AppHome, Header, Footer, Card],
   imports: [
     BrowserModule,
     NgImageFullscreenViewModule,

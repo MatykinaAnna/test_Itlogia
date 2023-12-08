@@ -1,17 +1,19 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-
+import { HttpClient } from '@angular/common/http';
+import { HttpService } from '../http.service';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
+  providers: [HttpService],
 })
 export class AppHome {
   form: FormGroup;
   popUp: boolean;
   selectedPizza: number[] = [];
 
-  constructor() {
+  constructor(private httpService: HttpService) {
     this.form = new FormGroup({
       name: new FormControl('', [Validators.required]),
       address: new FormControl('', Validators.required),
@@ -30,8 +32,29 @@ export class AppHome {
   }
 
   submit() {
-    console.log(this.form);
+    console.log(this.form.value);
     console.log(this.selectedPizza);
+    let data = {
+      name: this.form.value.name,
+      address: this.form.value.address,
+      phone: this.form.value.phone,
+      pizzaId: this.selectedPizza,
+    };
+    this.httpService.postData(data).subscribe({
+      // //next:(data: any) => {this.receivedUser=data; this.done=true;},
+      // error: (error) => console.log(error),
+    });
+  }
+
+  showDialog() {
+    let modal_t = document.getElementById('modal_1');
+    modal_t?.classList.remove('hhidden');
+    modal_t?.classList.add('sshow');
+  }
+  closeDialog() {
+    let modal_t = document.getElementById('modal_1');
+    modal_t?.classList.remove('sshow');
+    modal_t?.classList.add('hhidden');
   }
 
   _keyUp(event: any) {

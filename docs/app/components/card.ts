@@ -4,7 +4,7 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
   selector: 'card',
   template: `
     <div class="container">
-      <img (click)="showLightbox(0)" docs="{{ img }}" alt="" />
+      <img (click)="showLightbox(0)" src="{{ img }}" alt="" />
 
       <ng-image-fullscreen-view
         [images]="imageObject"

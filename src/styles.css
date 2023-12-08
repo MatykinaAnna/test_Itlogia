@@ -29,7 +29,7 @@ a:hover {
 
 @font-face {
   font-family: 'Prata';
-  src: url('./assets/fonts/Prata/Prata-Regular.ttf') format('truetype');
+  docs: url('./assets/fonts/Prata/Prata-Regular.ttf') format('truetype');
   font-style: normal;
   font-weight: normal;
 }

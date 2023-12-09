@@ -27,6 +27,8 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
         display: flex;
         flex-direction: column;
         align-items: center;
+
+        box-shadow: 0px 3px 14px 1px rgba(152, 152, 152, 0.2);
       }
       .min-cont {
         display: flex;
@@ -53,7 +55,7 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 280px;
+        width: 282px;
         height: 48px;
       }
       img {

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
+import { NgClass } from '@angular/common';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { HttpClient } from '@angular/common/http';
 import { HttpService } from '../http.service';
 @Component({
   selector: 'app-root',
@@ -10,8 +10,11 @@ import { HttpService } from '../http.service';
 })
 export class AppHome {
   form: FormGroup;
-  popUp: boolean;
   selectedPizza: number[] = [];
+
+  currentClasses: {
+    none: boolean;
+  };
 
   constructor(private httpService: HttpService) {
     this.form = new FormGroup({
@@ -23,12 +26,21 @@ export class AppHome {
       ]),
     });
 
-    this.popUp = false;
+    this.currentClasses = {
+      none: true,
+    };
 
     // this.form.get('name')?.valueChanges.subscribe((value: string) => {
     //   let name = value.replace('.', '')
     //   this.form.patchValue({ name: name })
     // })
+  }
+
+  click() {
+    console.log('click');
+    this.currentClasses = {
+      none: true,
+    };
   }
 
   submit() {
@@ -44,6 +56,10 @@ export class AppHome {
       // //next:(data: any) => {this.receivedUser=data; this.done=true;},
       // error: (error) => console.log(error),
     });
+
+    this.currentClasses = {
+      none: false,
+    };
   }
 
   showDialog() {

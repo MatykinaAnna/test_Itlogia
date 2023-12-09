@@ -12,11 +12,12 @@ import { AppHome } from './home/app.component';
 import { Header } from './components/header';
 import { Footer } from './components/footer';
 import { Card } from './components/card';
+import { AppModulePopUp } from './components/DialogModule/AppModule';
 
 const routes: Routes = [{ path: '', component: AppHome }];
 
 @NgModule({
-  declarations: [AppComponent, AppHome, Header, Footer, Card],
+  declarations: [AppComponent, AppHome, Header, Footer, Card, AppModulePopUp],
   imports: [
     BrowserModule,
     NgImageFullscreenViewModule,
